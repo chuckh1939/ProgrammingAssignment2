@@ -1,9 +1,9 @@
-## First function saved inverse of matrix in cache
-## 2nd function gets inverse of matrix if it has already been
-## saved to cache and matrix has not changed
-## otherwise it recaculated the inverse if data has changed
+## makeCacheMatrix takes matrix and saves inverse of matrix in cache
+## cacheSolve retrieves inverse of matrix from first function if it has already been
+## saved to cache, and matrix has not changed
+## otherwise it recalculate the inverse, if data has changed
 
-## function to set inversed data in cache
+## function to save inverse of matrix to cache
 
 makeCacheMatrix <- function(x = matrix()) {
   s <- NULL
@@ -20,7 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 makeCacheMatrix
 
-## function to get inversed cached data
+## function to get inverse data from cache, otherwise calculates it 
 
 cacheSolve <- function(x, ...) {
   s <- x$getsolve()
